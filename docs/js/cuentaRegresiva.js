@@ -1,5 +1,5 @@
 
-const graduationDate = new Date("July 26, 2025 18:00:00").getTime();
+const graduationDate = new Date("July 14, 2025 00:00:00").getTime();
 
 const countdownInterval = setInterval(() => {
   const now = new Date().getTime();
@@ -135,4 +135,73 @@ let misaIndex = 0;
       thumb.classList.add('active');
     });
   });
-  
+
+
+   // ➕ Nuevo slider (independiente)
+  document.querySelectorAll('.thumb2').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const mainImage2 = document.getElementById('mainImage2');
+      const mainText2 = document.getElementById('mainText2');
+
+      const titulo2 = thumb.dataset.titulo;
+      const nombres2 = thumb.dataset.nombres.split('|');
+
+      const html2 = `
+        <span class="titulo-slider2">${titulo2}</span>
+        <span class="nombres-slider2">${nombres2.join('<br>')}</span>
+      `;
+
+      mainImage2.src = thumb.src;
+      mainText2.innerHTML = html2;
+
+      // Reiniciar animación
+      mainText2.classList.remove('main-text2');
+      void mainText2.offsetWidth;
+      mainText2.classList.add('main-text2');
+
+      document.querySelectorAll('.thumb2').forEach(img => img.classList.remove('active'));
+      thumb.classList.add('active');
+    });
+  });
+
+
+
+
+
+
+
+
+  let indexDiablada = 0;
+let indexTinkus = 0;
+let indexMorenada = 0;
+
+function showSlides(slidesClass, index) {
+  const slides = document.querySelectorAll(`.${slidesClass} img`);
+  slides.forEach((img, i) => {
+    img.style.display = (i === index) ? 'block' : 'none';
+  });
+}
+
+function slideDiablada(n) {
+  const slides = document.querySelectorAll('.diablada-slides img');
+  indexDiablada = (indexDiablada + n + slides.length) % slides.length;
+  showSlides('diablada-slides', indexDiablada);
+}
+
+function slideTinkus(n) {
+  const slides = document.querySelectorAll('.tinkus-slides img');
+  indexTinkus = (indexTinkus + n + slides.length) % slides.length;
+  showSlides('tinkus-slides', indexTinkus);
+}
+
+function slideMorenada(n) {
+  const slides = document.querySelectorAll('.morenada-slides img');
+  indexMorenada = (indexMorenada + n + slides.length) % slides.length;
+  showSlides('morenada-slides', indexMorenada);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  showSlides('diablada-slides', indexDiablada);
+  showSlides('tinkus-slides', indexTinkus);
+  showSlides('morenada-slides', indexMorenada);
+});

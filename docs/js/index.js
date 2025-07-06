@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
       saludoElement.innerText = "¡Bienvenido a la invitación!";
     }
     if (mensajeElement) {
-      mensajeElement.innerText = "Queridos amigos y familiares, reciban un cordial saludo. Es un honor invitarles a la fiesta en honor a nuestro Tata Santiago, un día especial de fe y felicidad.";
+      mensajeElement.innerText = "Los Pasantes 2025 saludamos a ustedes con mucho cariño y humildad, y tenemos el grato placer de invitarle(s) a la FESTIVIDAD; a realizarse los días 14, 15, 16, 17 y 18 DE JULIO del presente año, de acuerdo a cronograma en nuestra querida Provincia de Ayopaya, Independencia.";
     }
   }
 });

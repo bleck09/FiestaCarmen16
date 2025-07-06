@@ -1421,7 +1421,7 @@ hr {
 
  /* Sección con imagen de fondo y parallax */
  .section2 {
-  background-image: url('../Img/Fondo2\ .webp');
+  background-image: url('../Img/Independencia.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1441,7 +1441,7 @@ hr {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
@@ -1465,7 +1465,7 @@ hr {
 @media (max-width: 768px) {
     .section2 {
         background-attachment: fixed; /* Mantén el efecto parallax en móviles */
-        height: 100vh; /* La altura sigue siendo del 100% de la pantalla */
+        height: 150vh; /* La altura sigue siendo del 100% de la pantalla */
     }
     
     .section2 > * {
@@ -1483,7 +1483,7 @@ hr {
 /* Ajuste para pantallas más pequeñas como teléfonos */
 @media (max-width: 480px) {
     .section2 {
-        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+        height: 100vh; /* Ajusta la altura en pantallas muy pequeñas */
     }
     
     .section2-content {
@@ -1588,7 +1588,7 @@ hr {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -1612,7 +1612,7 @@ hr {
 @media (max-width: 768px) {
     .section45 {
         background-attachment: fixed; /* Mantén el efecto parallax en móviles */
-        height: 100vh; /* La altura sigue siendo del 100% de la pantalla */
+        height: 350vh; /* La altura sigue siendo del 100% de la pantalla */
     }
     
     .section45 > * {
@@ -2031,4 +2031,70 @@ hr {
   box-shadow: 0 0 20px rgb(255, 255, 255);
   border: 2px solid rgb(255, 0, 0);
   z-index: 2;
+}
+
+
+.thumbnails2 {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.thumbnails2 img {
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  margin: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: transform 0.3s, opacity 0.3s;
+  box-shadow: 0 0 20px rgb(252, 0, 0);
+}
+
+.thumbnails2 img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.thumb2.active {
+  transform: scale(1.2);
+  opacity: 1 !important;
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+  border: 2px solid rgb(255, 0, 0);
+  z-index: 2;
+}
+
+
+.main-text2 {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  font-size: 2rem;
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: white;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 25px;
+  border-radius: 10px;
+  animation: fadeIn 1s;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.titulo-slider2 {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.nombres-slider2 {
+  font-size: 1rem;
+  color: #eeff00;
 }
