@@ -2274,8 +2274,8 @@ hr {
 
 .mpasantes-card {
   position: relative;
-  width: 350px;
-  height: 400px;
+  width: 320px;
+  height: 380px;
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.7);
@@ -2327,3 +2327,60 @@ hr {
   font-size: 14px;
   color: #555;
 }
+
+
+
+
+
+
+
+.carusel_3d {
+  background-color: #fff2f200;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  overflow: hidden;
+}
+
+.card-3d {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(0deg);
+  will-change: transform;
+}
+
+.card-3d div {
+  position: absolute;
+  width: 130px; /* más angosto */
+  height: 180px;
+  background: white;
+  border-radius: 1rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  backface-visibility: hidden;
+}
+
+.card-3d img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-3d div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(250px); }
+.card-3d div:nth-child(2) { transform: translate(-50%, -50%) rotateY(40deg) translateZ(250px); }
+.card-3d div:nth-child(3) { transform: translate(-50%, -50%) rotateY(80deg) translateZ(250px); }
+.card-3d div:nth-child(4) { transform: translate(-50%, -50%) rotateY(120deg) translateZ(250px); }
+.card-3d div:nth-child(5) { transform: translate(-50%, -50%) rotateY(160deg) translateZ(250px); }
+.card-3d div:nth-child(6) { transform: translate(-50%, -50%) rotateY(200deg) translateZ(250px); }
+.card-3d div:nth-child(7) { transform: translate(-50%, -50%) rotateY(240deg) translateZ(250px); }
+.card-3d div:nth-child(8) { transform: translate(-50%, -50%) rotateY(280deg) translateZ(250px); }
+.card-3d div:nth-child(9) { transform: translate(-50%, -50%) rotateY(320deg) translateZ(250px); }
+
