@@ -1483,7 +1483,7 @@ hr {
 /* Ajuste para pantallas más pequeñas como teléfonos */
 @media (max-width: 480px) {
     .section2 {
-        height: 150vh; /* Ajusta la altura en pantallas muy pequeñas */
+        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
     }
     
     .section2-content {
@@ -1557,7 +1557,7 @@ hr {
 /* Ajuste para pantallas más pequeñas como teléfonos */
 @media (max-width: 480px) {
     .section99 {
-      height: 50vh; /* Ajusta la altura en pantallas muy pequeñas */
+      height: auto; /* Ajusta la altura en pantallas muy pequeñas */
     }
     
     .section99-content {
