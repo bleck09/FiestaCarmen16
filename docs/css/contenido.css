@@ -2176,40 +2176,83 @@ hr {
 
 
 
+/* Contenedor principal con perspectiva */
+.carrusel-diablada {
+  width: 100%;
+  height: 50vh;
+  perspective: 1000px;
+  overflow: hidden;
+  position: relative;
+}
 
- .carrusel-diablada {
-    width: 100%;
-    max-width: 620px;
-    overflow: hidden;
-    margin: auto;
-  }
+/* Fondo curvo a los lados */
+.carrusel-diablada::before,
+.carrusel-diablada::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(to right, var(--color-bg) 0%, transparent 100%);
+  pointer-events: none;
+}
+.carrusel-diablada::before {
+  left: 0;
+}
+.carrusel-diablada::after {
+  right: 0;
+  transform: scaleX(-1);
+}
 
-  .carrusel-diablada-wrapper {
-    overflow: hidden;
-    position: relative;
-  }
+/* Lista deslizable */
+.carrusel-diablada-viewport {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 0 10px;
+  -webkit-overflow-scrolling: touch;
+  transform-style: preserve-3d;
+}
 
-  .carrusel-diablada-track {
-    display: flex;
-    gap: 20px; /* separación entre imágenes */
-    transition: transform 1s ease-in-out;
-    will-change: transform;
-  }
+/* Oculta la barra de scroll */
+.carrusel-diablada-viewport::-webkit-scrollbar {
+  display: none;
+}
+.carrusel-diablada-viewport {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
-  .carrusel-diablada-track img {
-    width: 100%;
-    max-width: 600px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    user-select: none;
-    pointer-events: none;
-  }
+/* Cada imagen */
+.carrusel-diablada-slide {
+  position: relative;
+  flex: 0 0 300px;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
 
-  .carrusel-diablada-wrapper::-webkit-scrollbar {
-    display: none;
-  }
+/* Aplica efecto de curva dinámico */
+.carrusel-diablada-slide:nth-child(1),
+.carrusel-diablada-slide:nth-child(2) {
+  transform: rotateY(15deg);
+}
+.carrusel-diablada-slide:nth-last-child(1),
+.carrusel-diablada-slide:nth-last-child(2) {
+  transform: rotateY(-15deg);
+}
 
-  .carrusel-diablada-wrapper {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+.carrusel-diablada-snapper {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border: 5px solid var(--color-bg);
+}
