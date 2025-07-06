@@ -2175,84 +2175,80 @@ hr {
 }
 
 
-
-/* Contenedor principal con perspectiva */
-.carrusel-diablada {
+.container-tinku {
   width: 100%;
-  height: 50vh;
-  perspective: 1000px;
-  overflow: hidden;
-  position: relative;
-}
-
-/* Fondo curvo a los lados */
-.carrusel-diablada::before,
-.carrusel-diablada::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 200px;
-  height: 100%;
-  z-index: 2;
-  background: linear-gradient(to right, var(--color-bg) 0%, transparent 100%);
-  pointer-events: none;
-}
-.carrusel-diablada::before {
-  left: 0;
-}
-.carrusel-diablada::after {
-  right: 0;
-  transform: scaleX(-1);
-}
-
-/* Lista deslizable */
-.carrusel-diablada-viewport {
-  position: absolute;
-  inset: 0;
   display: flex;
+  justify-content: center;
+  overflow-x: auto;  
+  gap: 16px;
+  flex-wrap: wrap;   
+  transition: 0.3s;
+  padding: 20px;
+ 
   overflow-x: auto;
-  scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding: 0 10px;
   -webkit-overflow-scrolling: touch;
-  transform-style: preserve-3d;
 }
-
-/* Oculta la barra de scroll */
-.carrusel-diablada-viewport::-webkit-scrollbar {
+.container-tinku::-webkit-scrollbar {
   display: none;
 }
-.carrusel-diablada-viewport {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
 
-/* Cada imagen */
-.carrusel-diablada-slide {
+.container-tinku li {
   position: relative;
-  flex: 0 0 300px;
+ 
+  flex: 0 0 80px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  transition: 0.3s ease;
   scroll-snap-align: center;
-  transition: transform 0.3s ease;
-  transform-origin: center;
 }
-
-/* Aplica efecto de curva dinámico */
-.carrusel-diablada-slide:nth-child(1),
-.carrusel-diablada-slide:nth-child(2) {
-  transform: rotateY(15deg);
-}
-.carrusel-diablada-slide:nth-last-child(1),
-.carrusel-diablada-slide:nth-last-child(2) {
-  transform: rotateY(-15deg);
-}
-
-.carrusel-diablada-snapper {
+.container-tinku li img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
-  border-radius: 15px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  border: 5px solid var(--color-bg);
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+.container-tinku li .content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s ease;
+  display: flex;
+  align-items: flex-end;
+}
+.container-tinku li:hover {
+  flex: 0 0 260px;
+}
+.container-tinku li:hover img {
+  transform: translate(-50%, -50%) scale(1.05);
+}
+.container-tinku li:hover .content {
+  opacity: 1;
+  visibility: visible;
+}
+.container-tinku .content span {
+  color: white;
+  text-align: center;
+}
+.container-tinku .content h2 {
+  font-size: 20px;
+  margin: 0;
+}
+.container-tinku .content p {
+  font-size: 14px;
+  margin-top: 5px;
 }
