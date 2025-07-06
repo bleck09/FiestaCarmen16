@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tata Santiago</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EC5qXZ2IsEj/J5K4edfpBSR9Yh1KfbzBb82PpMWFZpgdRVH+zLsi7BzZlXDb6dfT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/contenido.css">
+ <!-- Íconos -->
+ <link rel="icon" type="image/png" href="Img/TataSantiagoIco.png">
+ <link rel="apple-touch-icon" href="Img/TataSantiagoIco.png">
+
+</head>
+
+<body>
+    <!-- Elemento de audio oculto -->
+    <audio id="background-music" loop>
+        <source src="../music/tata-santiago.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script>
+        // Función para reproducir o pausar la música dependiendo de la visibilidad de la página
+        function handleVisibilityChange() {
+            var audio = document.getElementById('background-music');
+
+            if (document.hidden) {
+                audio.pause(); // Pausa la música si la página no está visible
+            } else {
+                audio.play(); // Reanuda la música si la página está visible
+            }
+        }
+
+        // Al cargar la página, reproduce la música
+        window.addEventListener('load', function () {
+            var audio = document.getElementById('background-music');
+            audio.play();
+        });
+
+        // Escucha el evento de cambio de visibilidad
+        document.addEventListener('visibilitychange', handleVisibilityChange, false);
+    </script>
+    <section class="section2">
+        <div class="container text-center mt-5"> 
+            <br><br>
+            <img src="../Img/TataSantiago5.jpg" alt="Imagen con latido" style="width: 250px; height: auto; border-radius: 10px; box-shadow: 4px 6px 10px rgba(255, 255, 255, 0.8); margin: 45px;">
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                Que la fe y la alegría iluminen cada instante en honor a nuestro Tata Santiago. Que esta festividad sea motivo de unión, de gratitud y de encuentro entre familias y amigos. Con la bendición de Dios y la intercesión del Tata Santiago.
+            </p>
+            <br><br>
+        </div>
+        
+    </section>
+    <section class="Pasante d-flex text-center">
+        <div class="Pasante-content">
+            <div class="custom-slider">
+                <div class="main-image">
+                  <img id="mainImage" src="../Img/hijaMadre.jpg" alt="Imagen principal">
+                  <div id="mainText" class="main-text">
+                    <span class="titulo-slider">Pasantes 2025</span>
+                    <span class="nombres-slider">Dra. Vanessa C. Murguia Garcia<br>y sra madre<br>Elsa Garcia Toledo</span>
+                  </div>
+                </div>
+                <div class="thumbnails">
+                    <img class="thumb active" 
+                         src="../Img/hijaMadre.jpg" 
+                         alt="Pasantes 2025"
+                         data-titulo="Pasantes 2025"
+                         data-nombres="Dra. Vanessa C. Murguia Garcia|y sra madre|Elsa Garcia Toledo">
+                  
+                    <img class="thumb" 
+                         src="../Img/Propietarios.jpeg" 
+                         alt="Propietarios"
+                         data-titulo="Propietarios"
+                         data-nombres="Felix Rivero Rodriguez|y|Maritza Andrade Garcia">
+                  </div>
+              </div>
+        </div>
+    </section>
+
+   
+      
+      
+
+<!--
+    <div class="cardAnahi">
+        <section class="LibroCenter_propietario">
+            <div class="book_propietario">
+              <p></p>
+              <div class="cover_propietario"> 
+                <div style="text-align: center;">
+                  <h3 style="color: black; font-size: 20px; margin: 0; font-family: 'Georgia', serif; font-style: italic;">Propietarios</h3>
+                  <br><br>
+                  <p style="color: red; margin: 10px 0 0 0; font-family: 'Georgia', serif; font-style: italic; font-size: 15px;">
+                    Felix Rivero Rodriguez<br>
+                    y<br>
+                    Maritza Andrade Garcia
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section class="LibroCenter_pasante">
+            <div class="book_pasante">
+              <p></p>
+              <div class="cover_pasante"> 
+                <div style="text-align: center;">
+                  <h3 style="color: black; font-size: 20px; margin: 0; font-family: 'Georgia', serif; font-style: italic;">Pasantes 2025</h3>
+                  <br><br>
+                  <p style="color: red; margin: 10px 0 0 0; font-family: 'Georgia', serif; font-style: italic; font-size: 15px;">
+                    Dra. Vanessa C. Murguia Garcia<br>
+                    y sra madre<br>
+                    Elsa Garcia Toledo
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+    </div>
+   -->
+    <section class="section99">
+        <div class="container text-center mt-5"> 
+            
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                Te invitamos a compartir esta inolvidable fiesta.<br>
+                ¡Te esperamos con los brazos abiertos para vivir juntos la devoción, la tradición y la alegría que envuelven el día de Tata Santiago!
+              </p>
+        </div>
+    </section>
+        
+          
+          <hr>
+          <h2 class="display-4 text-primary">La misa y fiesta con honor al  Tata Santiago</h2>
+          <hr> 
+    <section class="section45">
+        <div class="container text-center mt-5">
+          <!-- Imagen con sombra y lo que ya tenías -->
+          <img
+            src="../Img/TataSantiago1.webp"
+            loading="lazy"
+            alt="Imagen con latido"
+            style="width: 200px; height: auto; box-shadow: 4px 6px 10px rgba(255, 255, 255, 0.8); margin-top: 50px; border-radius: 20px;"
+          />
+          <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+            </b>HISTORIA</b>
+            </p>
+          
+          <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+            El 25 de julio se celebra la fiesta del Apóstol Santiago, conmemorando su martirio. Desde la Edad Media se convirtió en un día de indulgencias para peregrinos, y si coincide en domingo se declara Año Santo Compostelano. Hoy, además de su importancia religiosa (misa solemne y ofrenda oficial), incluye espectáculos como los fuegos artificiales en la plaza del Obradoiro y coincide con el Día de Galicia, sumando celebraciones festivas y culturales.
+            </p>
+        </div>
+    </section>
+    <hr>
+    <h2 class="display-4 text-primary">Dia de la ceremonia</h2>
+    <hr>
+    <div class="calendar-card mx-auto my-4">
+        <h2 class="month">JULIO</h2>
+        <h1 class="date">26</h1>
+        <p class="weekday">Sabado</p>
+      </div>
+      <hr>
+    <section class="section3 d-flex text-center">
+        <div class="section3-content">
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px; font-size: 24px;">
+               <b>Quedan exactamente...</b> 
+                </p>
+          <div class="countdown-container">
+            <div class="countdown-box">
+              <span id="days">0</span>
+              <p>DÍAS</p>
+            </div>
+            <div class="countdown-box">
+              <span id="hours">0</span>
+              <p>HRS</p>
+            </div>
+            <div class="countdown-box">
+              <span id="minutes">0</span>
+              <p>MIN</p>
+            </div>
+            <div class="countdown-box">
+              <span id="seconds">0</span>
+              <p>SEG</p>
+            </div>
+          </div>
+          <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+            “Con sincera emoción, les invitamos cordialmente a celebrar la fiesta de Tata Santiago”
+            </p>
+          
+        </div>
+      </section>
+    <hr>
+    <h2 class="display-4 text-primary">Detalles de la misa</h2>
+    <hr>
+    <section class="Misa d-flex text-center">
+        <div class="Misa-content">
+            <br>
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b>Santa Misa</b>
+              </p>
+              <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <br> a Hrs. 16:00 en la parroquia La Rotonda
+              </p>
+              
+              <div class="misa-carrusel">
+                <div class="misa-slides">
+                  <img src="../Img/Misa.jpg" alt="Santa Misa">
+                  <img src="../Img/LaRotonda.webp" alt="Parroquia La Rotonda">
+                </div>
+                <button class="misa-prev" onclick="misaSlide(-1)">❮</button>
+                <button class="misa-next" onclick="misaSlide(1)">❯</button>
+              
+            </div>
+            
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b>Ubicacion de la Misa</b>
+              </p>
+              <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                 Ubicado en la Av. 6 de octubre y Aldana.
+              </p>
+              <a href="https://maps.app.goo.gl/Ld62JeP8wSxQcH9ZA" target="_blank">
+                <img src="../Img/UbicacionMisa.png" alt="Lugar del evento" class="img-fluid ubicacion-img">
+              </a>
+            <br>
+            <button onclick="window.open('https://maps.app.goo.gl/Ld62JeP8wSxQcH9ZA', '_blank');"
+                class="btn btn-primary mt-3">
+                Abrir Ubicación
+                <div class="star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </button>
+            <br>
+        </div>
+    </section>
+    <hr>
+    <h2 class="display-4 text-primary">Detalles del Evento</h2>
+    <hr>
+    <section class="section4 d-flex text-center">
+        <div class="section4-content">
+            <br>
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b></b>
+              </p>
+              <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <br>   Luego de la misa, están cordialmente invitados a compartir una hermosa velada llena de alegría y tradición.
+              </p>
+            <div class="cardAnahi">
+                <img src="../Img/Celebracion.jpg" alt="Lugar del evento" class="img-fluid uni-img"
+                style="max-width: 600px; width: 100%; height: auto;">
+            </div>
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <b>Ubicación del Evento</b>
+              </p>
+              <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                Calle Santa Cruz #304 entre 6 de Octubre y Vásquez (Cinco Esquinas)
+              </p>
+              <a href="https://maps.app.goo.gl/yAyNnWmWc7B676529" target="_blank">
+                <img src="../Img/ubicacion.png" alt="Lugar del evento" class="img-fluid ubicacion-img">
+              </a>
+            <br>
+            <button onclick="window.open('https://maps.app.goo.gl/yAyNnWmWc7B676529', '_blank');"
+                class="btn btn-primary mt-3">
+                Abrir Ubicación
+                <div class="star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </button>
+            <br>
+        </div>
+    </section> 
+    <hr>
+    <h2 class="display-4 text-primary">Confirma tu asistencia</h2>
+    <hr>
+    <section class="section4 d-flex text-center">
+        <div class="section4-content">
+            <br><br><br><br>
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                <strong>¡Esperamos contar contigo!</strong> 
+            </p>
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                Te pedimos que rellenes el formulario y lo envíes. ¡Así nos ayudas mucho!
+            </p>
+            <a href="https://maps.app.goo.gl/ZKmrpK1D7zo7XAKw9" target="_blank">
+                <img src="../Img/Confirmar.png" alt="Lugar del evento" class="img-fluid ubicacion-img">
+              </a>
+            <br>
+            <button onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeoxkrcKrv-CzjmnEgFFabH60vRRRXZfyvSz74HaJw8el05Yw/viewform?usp=header', '_blank');"
+                class="btn btn-primary mt-3">
+                Confirmar Asistencia
+                <div class="star-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <div class="star-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" version="1.1"
+                        style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                        viewBox="0 0 784.11 815.53" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs></defs>
+                        <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path class="fil0"
+                                d="M392.05 0c-20.9,210.08 -184.06,378.41 -392.05,407.78 207.96,29.37 371.12,197.68 392.05,407.74 20.93,-210.06 184.09,-378.37 392.05,-407.74 -207.98,-29.38 -371.16,-197.69 -392.06,-407.78z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+            </button>
+            <br>
+            
+        </div>
+    </section>
+    <hr>
+        <div class="container text-center mt-5">
+            <h2 class="display-4 text-primary">Detalles Importantes</h2>
+        </div>
+        <hr>
+    <section class="section78">
+        <div class="container text-center mt-5"> 
+            <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffffff; text-align: center; margin: 10px 20px;">
+                ¡Esperamos contar contigo! <br>
+                Sabemos cómo eres, así que no llegues tarde, ¿vale? <br>
+                Por favor, no olvides confirmar tu asistencia lo antes posible, ¡contamos contigo!
+            </p>
+        </div>
+    </section>
+    
+    <hr>
+    <h2 class="display-4 text-primary">Agradecimiento</h2>
+    <hr>
+    <p style="font-family: 'Georgia', serif; font-style: italic; color: #000000; text-align: center; margin: 10px 20px;">
+        Gracias por acompañarnos en este día tan especial para nosotros.
+    </p>
+    
+    <p style="font-family: 'Georgia', serif; font-style: italic; color: #000000; text-align: center; margin: 10px 20px;">
+        Señor Santiago, Apóstol, que fuiste fiel a Jesús y perseveraste en la fe, te pedimos que intercedas por nosotros ante la Santísima Trinidad.
+Concédenos fortaleza, sabiduría y coraje para seguir a Cristo en todo momento.
+Protégenos de los peligros y guíanos en el camino de la santidad. Amén.
+    </p>
+    <hr>
+    <section class="section">
+        <!-- Galería 3D --><h2 class="display-4 text-primary">  </h2>
+        <div class="gallery3d">
+            <div class="box">
+                <span class="gallery_corazon">
+                </span>
+
+                <span style="--i:1;"><img src="../Img/TataSantiagoVane.jpeg" alt="Imagen 1"></span>
+                <span style="--i:2;"><img src="../Img/TataSantiago3.jpg" alt="Imagen 2"></span>
+                <span style="--i:3;"><img src="../Img/TataSantiago4.jpg" alt="Imagen 3"></span>
+                <span style="--i:4;"><img src="../Img/TataSantiago5.jpg" alt="Imagen 4"></span>
+                <span style="--i:5;"><img src="../Img/TataSantiago6.jpg" alt="Imagen 5"></span>
+                <span style="--i:6;"><img src="../Img/TataSantiago7.jpg" alt="Imagen 6"></span>
+                <span style="--i:7;"><img src="../Img/TataSantiago1.webp" alt="Imagen 6"></span>
+                <span style="--i:8;"><img src="../Img/TataSantiago9.jpg" alt="Imagen 6"></span>
+            </div>
+        </div>
+        <h2 class="display-4 text-primary">Oruro, 26 de Julio de 2025</h2>
+    </section>
+    <hr>
+
+    <script src="../js/cuentaRegresiva.js"></script>
+    
+
+</body>
+
+</html>
