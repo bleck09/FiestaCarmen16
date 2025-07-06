@@ -1,23 +1,32 @@
- const carrusel = document.getElementById("carrusel3d");
+  const carrusel = document.getElementById("carrusel3d");
   let angle = 0;
   let isDragging = false;
   let startX = 0;
   let autoRotateInterval;
+  let lastMoveTime = 0;
 
+  // Auto rotación con velocidad controlada
   const rotate = () => {
-    angle += 0.3;
+    angle = (angle + 0.3) % 360;
+    updateRotation();
+  };
+
+  const updateRotation = () => {
     carrusel.style.transform = `perspective(1000px) rotateY(${angle}deg)`;
   };
 
   const startAutoRotate = () => {
-    autoRotateInterval = setInterval(rotate, 30);
+    if (!autoRotateInterval) {
+      autoRotateInterval = setInterval(rotate, 30);
+    }
   };
 
   const stopAutoRotate = () => {
     clearInterval(autoRotateInterval);
+    autoRotateInterval = null;
   };
 
-  // Mouse / Touch handlers
+  // Manejo de arrastre
   const startDrag = (x) => {
     isDragging = true;
     stopAutoRotate();
@@ -26,26 +35,34 @@
 
   const moveDrag = (x) => {
     if (!isDragging) return;
-    let delta = x - startX;
-    angle += delta * 0.3;
-    carrusel.style.transform = `perspective(1000px) rotateY(${angle}deg)`;
+    const delta = x - startX;
+    angle += delta * 0.4;
+    angle = angle % 360; // evita que se dispare a números altos
+    updateRotation();
     startX = x;
+    lastMoveTime = Date.now();
   };
 
   const endDrag = () => {
     isDragging = false;
-    startAutoRotate();
+    // Espera un pequeño tiempo antes de volver a auto-rotar
+    setTimeout(() => {
+      // Solo si no ha habido movimiento reciente
+      if (Date.now() - lastMoveTime > 300) {
+        startAutoRotate();
+      }
+    }, 500);
   };
 
-  // Mouse events
+  // Eventos para mouse
   carrusel.addEventListener("mousedown", e => startDrag(e.clientX));
   window.addEventListener("mousemove", e => moveDrag(e.clientX));
   window.addEventListener("mouseup", endDrag);
 
-  // Touch events
+  // Eventos para touch (móvil)
   carrusel.addEventListener("touchstart", e => startDrag(e.touches[0].clientX));
   carrusel.addEventListener("touchmove", e => moveDrag(e.touches[0].clientX));
   carrusel.addEventListener("touchend", endDrag);
 
-  // Iniciar auto rotación al cargar
+  // Iniciar auto-rotación
   startAutoRotate();
