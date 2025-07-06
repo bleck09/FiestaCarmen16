@@ -55,3 +55,20 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
+
+// envuelve en IIFE para no contaminar el scope global
+(function() {
+  const SKIP_CLASS = 'fast-forward';
+
+  function skipAnimations() {
+    document.body.classList.add(SKIP_CLASS);
+    // opcional: si quieres que sólo ocurra la primera vez
+    document.removeEventListener('click', skipAnimations);
+    document.removeEventListener('dblclick', skipAnimations);
+  }
+
+  // al primer clic o doble clic en la página, cancelamos animaciones
+  document.addEventListener('click', skipAnimations);
+  document.addEventListener('dblclick', skipAnimations);
+})();

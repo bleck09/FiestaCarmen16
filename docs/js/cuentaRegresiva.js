@@ -205,3 +205,5 @@ document.addEventListener("DOMContentLoaded", () => {
   showSlides('tinkus-slides', indexTinkus);
   showSlides('morenada-slides', indexMorenada);
 });
+
+

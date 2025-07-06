@@ -554,3 +554,13 @@ body {
   background-size: 300% 300%;
   color: #181818;
 }
+
+/* Clase que hace que todas las animaciones y transiciones sean instantáneas */
+.fast-forward *,
+.fast-forward *::before,
+.fast-forward *::after {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
