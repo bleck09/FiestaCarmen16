@@ -1,26 +1,35 @@
-
-const graduationDate = new Date("July 14, 2025 00:00:00").getTime();
+ const graduationDate = new Date("July 14, 2025 00:00:00").getTime();
 
 const countdownInterval = setInterval(() => {
   const now = new Date().getTime();
   const distance = graduationDate - now;
+
+  if (distance <= 0) {
+    clearInterval(countdownInterval);
+
+    // ✅ Cambiar el título superior por una nueva frase
+    document.getElementById("countdownTitle").innerHTML = "<b>¡EMPEZÓ LA GRAN FIESTA!</b>";
+
+    // ✅ Ocultar contadores
+    document.getElementById("countdownBoxes").style.display = "none";
+
+    // ✅ Cambiar la frase final
+    document.getElementById("countdownPhrase").innerHTML = `
+      La alegría florece en nuestros corazones… ¡Vivimos los días más esperados junto a la VIRGEN DEL CARMEN!
+      `;
+    document.getElementById("countdownPhrase").style.fontSize = "22px";
+    return;
+  }
 
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
   const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  
   document.getElementById("days").textContent = days;
   document.getElementById("hours").textContent = hours;
   document.getElementById("minutes").textContent = minutes;
   document.getElementById("seconds").textContent = seconds;
-
-  
-  if (distance < 0) {
-    clearInterval(countdownInterval);
-    document.querySelector(".section3-content").innerHTML = "<h1>¡Es el día del acto!</h1>";
-  }
 }, 1000);
 
 
