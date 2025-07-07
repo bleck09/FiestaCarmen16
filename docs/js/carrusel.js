@@ -71,3 +71,21 @@ document.addEventListener("DOMContentLoaded", () => {
   initCarrusel("carrusel3d_tinku", 'reverse');   // gira a la izquierda
   initCarrusel("carrusel3d", 'normal');          // gira a la derecha
 });
+
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.5 // Puedes ajustar: 0.5 = mitad de la tarjeta debe estar visible
+  });
+
+  // Observar cada tarjeta con la clase específica
+  document.querySelectorAll('.mpasantes-card-glow').forEach(card => {
+    observer.observe(card);
+  });
