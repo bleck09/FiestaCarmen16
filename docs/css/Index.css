@@ -30,7 +30,7 @@ body {
     overflow: hidden;
     position: relative;
     animation: moveBackground 5s ease-in-out infinite alternate; /* Animación de movimiento */
-    background-image: url('../Img/FondoPrincipal.jpeg');
+    background-image: url('../Img/Independencia.png');
     border-radius: 20px;
   }
   
@@ -42,7 +42,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.1); /* Oscurece el fondo ligeramente */
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo ligeramente */
     z-index: 1;
   }
   
@@ -527,7 +527,11 @@ body {
 .heartbeat {
   opacity: 0;
   transform: scale(0.9);
-  animation: aparecerImagen 0.8s ease-out 2s forwards;
+  animation:
+    aparecerImagen 2s ease-out 1 forwards, /* animación de aparición */
+    glow 2s ease-in-out 2s infinite;         /* animación de brillo después */
+  filter: drop-shadow(0 0 8px #fcf1b4);
+  transition: filter 0.3s ease;
 }
 
 @keyframes aparecerImagen {
@@ -536,6 +540,16 @@ body {
     transform: scale(1);
   }
 }
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px #fcf1b4);
+  }
+  50% {
+    filter: drop-shadow(0 0 16px #fcf1b4);
+  }
+}
+
 .icon-1,
 .icon-2,
 .icon-3 {
@@ -564,3 +578,6 @@ body {
   transition-duration: 0s !important;
   transition-delay: 0s !important;
 }
+
+
+
