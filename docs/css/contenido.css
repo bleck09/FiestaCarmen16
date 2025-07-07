@@ -1421,7 +1421,7 @@ hr {
 
  /* Sección con imagen de fondo y parallax */
  .section2 {
-  background-image: url('../Img/Independencia.jpeg');
+  background-image: url('../Img/Independencia.png');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
