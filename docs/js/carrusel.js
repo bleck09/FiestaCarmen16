@@ -1,18 +1,19 @@
-  const carrusel = document.getElementById("carrusel3d");
+ // Función reutilizable para cada carrusel
+function initCarrusel(id, direction = 'normal') {
+  const carrusel = document.getElementById(id);
   let angle = 0;
   let isDragging = false;
   let startX = 0;
   let autoRotateInterval;
   let lastMoveTime = 0;
 
-  // Auto rotación con velocidad controlada
   const rotate = () => {
-    angle = (angle + 0.3) % 360;
+    angle = (angle + (direction === 'reverse' ? -0.3 : 0.3)) % 360;
     updateRotation();
   };
 
   const updateRotation = () => {
-    carrusel.style.transform = `perspective(1000px) rotateY(${angle}deg)`;
+    carrusel.style.transform = `perspective(1200px) rotateY(${angle}deg)`;
   };
 
   const startAutoRotate = () => {
@@ -26,7 +27,6 @@
     autoRotateInterval = null;
   };
 
-  // Manejo de arrastre
   const startDrag = (x) => {
     isDragging = true;
     stopAutoRotate();
@@ -37,7 +37,7 @@
     if (!isDragging) return;
     const delta = x - startX;
     angle += delta * 0.4;
-    angle = angle % 360; // evita que se dispare a números altos
+    angle = angle % 360;
     updateRotation();
     startX = x;
     lastMoveTime = Date.now();
@@ -45,9 +45,7 @@
 
   const endDrag = () => {
     isDragging = false;
-    // Espera un pequeño tiempo antes de volver a auto-rotar
     setTimeout(() => {
-      // Solo si no ha habido movimiento reciente
       if (Date.now() - lastMoveTime > 300) {
         startAutoRotate();
       }
@@ -64,5 +62,12 @@
   carrusel.addEventListener("touchmove", e => moveDrag(e.touches[0].clientX));
   carrusel.addEventListener("touchend", endDrag);
 
-  // Iniciar auto-rotación
   startAutoRotate();
+}
+
+// Iniciar los 3 carruseles
+document.addEventListener("DOMContentLoaded", () => {
+  initCarrusel("carrusel3d_Diablada", 'normal'); // gira a la derecha
+  initCarrusel("carrusel3d_tinku", 'reverse');   // gira a la izquierda
+  initCarrusel("carrusel3d", 'normal');          // gira a la derecha
+});
