@@ -1005,7 +1005,7 @@ hr {
 
   /* Sección con imagen de fondo y parallax */
   .Misa {
-    background-image: url('../Img/MisaFondo.jpg');
+    background-image: url('../Img/Independencia.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -2332,50 +2332,51 @@ hr {
 
 
 
-/* Estilo general de sección */
+/* Contenedor de carrusel */
 .carusel_3d,
 .carusel_3d_Tinku,
 .carusel_3d_Diablada {
-  background-color: #ffe2e200;
+  background-color: transparent;
   padding: 60px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
-  overflow: hidden;
+  overflow: visible; /* Para que el reflejo se vea fuera del div */
 }
 
-/* Card base personalizada */
+/* Carrusel giratorio */
 .card-3d,
 .card-3d_tinku,
 .card-3d_Diablada {
   position: relative;
-  width: 600px;
-  height: 400px;
+  width: 100px;
+  height: 250px;
   transform-style: preserve-3d;
   will-change: transform;
 }
 
-/* Contenedores de imágenes */
+/* Elemento individual (tarjeta) */
 .card-3d div,
 .card-3d_tinku div,
 .card-3d_Diablada div {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: rgba(255, 255, 255, 0);
+  background: rgba(0, 0, 0, 0.85);
   border-radius: 1rem;
   top: 50%;
   left: 50%;
   transform-origin: center center;
   transition: transform 0.3s ease, opacity 0.3s ease;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  opacity: 1;
+  overflow: visible;
   backface-visibility: hidden;
+  box-shadow:
+    0 10px 20px rgba(255, 255, 255, 0.4),
+    0 6px 6px rgba(255, 255, 255, 0.3);
 }
 
-/* Imagen */
+/* Imagen original */
 .card-3d img,
 .card-3d_tinku img,
 .card-3d_Diablada img {
@@ -2383,37 +2384,62 @@ hr {
   height: 100%;
   object-fit: contain;
   background-color: black;
+  display: block;
+  border-radius: 1rem;
+  pointer-events: none;
 }
 
-.card-3d_Diablada div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(400px); }
-.card-3d_Diablada div:nth-child(2) { transform: translate(-50%, -50%) rotateY(51.43deg) translateZ(400px); }
-.card-3d_Diablada div:nth-child(3) { transform: translate(-50%, -50%) rotateY(102.86deg) translateZ(400px); }
-.card-3d_Diablada div:nth-child(4) { transform: translate(-50%, -50%) rotateY(154.29deg) translateZ(400px); }
-.card-3d_Diablada div:nth-child(5) { transform: translate(-50%, -50%) rotateY(205.71deg) translateZ(400px); }
-.card-3d_Diablada div:nth-child(6) { transform: translate(-50%, -50%) rotateY(257.14deg) translateZ(400px); }
-.card-3d_Diablada div:nth-child(7) { transform: translate(-50%, -50%) rotateY(308.57deg) translateZ(400px); }
+/* Reflejo estilo espejo */
+.card-3d div::after,
+.card-3d_tinku div::after,
+.card-3d_Diablada div::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: scaleY(-1);
+  opacity: 0.2;
+  filter: blur(2px);
+  border-radius: 1rem;
+  pointer-events: none;
+}
+
+
+.card-3d_Diablada div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(250px); }
+.card-3d_Diablada div:nth-child(2) { transform: translate(-50%, -50%) rotateY(51.43deg) translateZ(250px); }
+.card-3d_Diablada div:nth-child(3) { transform: translate(-50%, -50%) rotateY(102.86deg) translateZ(250px); }
+.card-3d_Diablada div:nth-child(4) { transform: translate(-50%, -50%) rotateY(154.29deg) translateZ(250px); }
+.card-3d_Diablada div:nth-child(5) { transform: translate(-50%, -50%) rotateY(205.71deg) translateZ(250px); }
+.card-3d_Diablada div:nth-child(6) { transform: translate(-50%, -50%) rotateY(257.14deg) translateZ(250px); }
+.card-3d_Diablada div:nth-child(7) { transform: translate(-50%, -50%) rotateY(308.57deg) translateZ(250px); }
 
 
 
-.card-3d_tinku div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(400px); }
-.card-3d_tinku div:nth-child(2) { transform: translate(-50%, -50%) rotateY(45deg) translateZ(400px); }
-.card-3d_tinku div:nth-child(3) { transform: translate(-50%, -50%) rotateY(90deg) translateZ(400px); }
-.card-3d_tinku div:nth-child(4) { transform: translate(-50%, -50%) rotateY(135deg) translateZ(400px); }
-.card-3d_tinku div:nth-child(5) { transform: translate(-50%, -50%) rotateY(180deg) translateZ(400px); }
-.card-3d_tinku div:nth-child(6) { transform: translate(-50%, -50%) rotateY(225deg) translateZ(400px); }
-.card-3d_tinku div:nth-child(7) { transform: translate(-50%, -50%) rotateY(270deg) translateZ(400px); }
-.card-3d_tinku div:nth-child(8) { transform: translate(-50%, -50%) rotateY(315deg) translateZ(400px); }
+.card-3d_tinku div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(300px); }
+.card-3d_tinku div:nth-child(2) { transform: translate(-50%, -50%) rotateY(45deg) translateZ(300px); }
+.card-3d_tinku div:nth-child(3) { transform: translate(-50%, -50%) rotateY(90deg) translateZ(300px); }
+.card-3d_tinku div:nth-child(4) { transform: translate(-50%, -50%) rotateY(135deg) translateZ(300px); }
+.card-3d_tinku div:nth-child(5) { transform: translate(-50%, -50%) rotateY(180deg) translateZ(300px); }
+.card-3d_tinku div:nth-child(6) { transform: translate(-50%, -50%) rotateY(225deg) translateZ(300px); }
+.card-3d_tinku div:nth-child(7) { transform: translate(-50%, -50%) rotateY(270deg) translateZ(300px); }
+.card-3d_tinku div:nth-child(8) { transform: translate(-50%, -50%) rotateY(315deg) translateZ(300px); }
 
 
 
 
-.card-3d div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(400px); }
-.card-3d div:nth-child(2) { transform: translate(-50%, -50%) rotateY(40deg) translateZ(400px); }
-.card-3d div:nth-child(3) { transform: translate(-50%, -50%) rotateY(80deg) translateZ(400px); }
-.card-3d div:nth-child(4) { transform: translate(-50%, -50%) rotateY(120deg) translateZ(400px); }
-.card-3d div:nth-child(5) { transform: translate(-50%, -50%) rotateY(160deg) translateZ(400px); }
-.card-3d div:nth-child(6) { transform: translate(-50%, -50%) rotateY(200deg) translateZ(400px); }
-.card-3d div:nth-child(7) { transform: translate(-50%, -50%) rotateY(240deg) translateZ(400px); }
-.card-3d div:nth-child(8) { transform: translate(-50%, -50%) rotateY(280deg) translateZ(400px); }
-.card-3d div:nth-child(9) { transform: translate(-50%, -50%) rotateY(320deg) translateZ(400px); }
+.card-3d div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(350px); }
+.card-3d div:nth-child(2) { transform: translate(-50%, -50%) rotateY(40deg) translateZ(350px); }
+.card-3d div:nth-child(3) { transform: translate(-50%, -50%) rotateY(80deg) translateZ(350px); }
+.card-3d div:nth-child(4) { transform: translate(-50%, -50%) rotateY(120deg) translateZ(350px); }
+.card-3d div:nth-child(5) { transform: translate(-50%, -50%) rotateY(160deg) translateZ(350px); }
+.card-3d div:nth-child(6) { transform: translate(-50%, -50%) rotateY(200deg) translateZ(350px); }
+.card-3d div:nth-child(7) { transform: translate(-50%, -50%) rotateY(240deg) translateZ(350px); }
+.card-3d div:nth-child(8) { transform: translate(-50%, -50%) rotateY(280deg) translateZ(350px); }
+.card-3d div:nth-child(9) { transform: translate(-50%, -50%) rotateY(320deg) translateZ(350px); }
 
