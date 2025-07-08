@@ -89,3 +89,16 @@ const observer = new IntersectionObserver(entries => {
   document.querySelectorAll('.mpasantes-card-glow').forEach(card => {
     observer.observe(card);
   });
+
+
+
+
+  
+const botones = document.querySelectorAll('.acordeon-btn');
+
+  botones.forEach(boton => {
+    boton.addEventListener('click', () => {
+      const item = boton.parentElement;
+      item.classList.toggle('activo');
+    });
+  });
