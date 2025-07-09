@@ -1986,6 +1986,59 @@ hr {
 
 
 
+.carruselRevollo {
+  position: relative;
+  max-width: 600px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.revollo-slides img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  display: none;
+  border-radius: 20px;
+}
+
+.revollo-prev, .revollo-next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.revollo-prev {
+  left: 10px;
+}
+
+.revollo-next {
+  right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .custom-slider {
   max-width: 300px;
   margin: auto;

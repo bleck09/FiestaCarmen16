@@ -148,6 +148,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+let revolloIndex = 0;
+const revolloSlides = document.querySelectorAll('.revollo-slides img');
+
+function showrevolloSlide(n) {
+  revolloSlides.forEach((img, i) => {
+    img.style.display = (i === n) ? 'block' : 'none';
+  });
+}
+
+function revolloSlide(n) {
+  revolloIndex += n;
+  if (revolloIndex < 0) revolloIndex = revolloSlides.length - 1;
+  if (revolloIndex >= revolloSlides.length) revolloIndex = 0;
+  showrevolloSlide(revolloIndex);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  showrevolloSlide(revolloIndex);
+});
+
+
+
+
+
   document.querySelectorAll('.thumb').forEach(thumb => {
     thumb.addEventListener('click', () => {
       const mainImage = document.getElementById('mainImage');
