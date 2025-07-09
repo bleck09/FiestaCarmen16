@@ -16,6 +16,33 @@
  <link rel="apple-touch-icon" href="Img/TataSantiagoIco.png">
 </head>
 <body>
+   <!-- Elemento de audio oculto -->
+    <audio id="background-music" loop>
+        <source src="/docs/music/hay_que_bailar_moreno.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <script>
+        // Función para reproducir o pausar la música dependiendo de la visibilidad de la página
+        function handleVisibilityChange() {
+            var audio = document.getElementById('background-music');
+
+            if (document.hidden) {
+                audio.pause(); // Pausa la música si la página no está visible
+            } else {
+                audio.play(); // Reanuda la música si la página está visible
+            }
+        }
+
+        // Al cargar la página, reproduce la música
+        window.addEventListener('load', function () {
+            var audio = document.getElementById('background-music');
+            audio.play();
+        });
+
+        // Escucha el evento de cambio de visibilidad
+        document.addEventListener('visibilitychange', handleVisibilityChange, false);
+    </script>
   <section class="section1" >
     <div class="container text-center mt-5">
       <p style="font-family: 'Georgia', serif; font-style: italic; color: #ffdd75 ; text-align: center; margin: 10px 20px;">
@@ -29,7 +56,7 @@
       </p>
       <br>
       <p id="mensaje-invitado" style="font-family: 'Georgia', serif; font-style: italic; color: rgb(255, 255, 255); text-align: center; margin: 10px 70px; font-size: 20px;">
-      La fe y devoción nos une, la tradición nos llama. Los Pasantes 2025 tenemos el honor de invitarle(s) a celebrar con nosotros la Festividad de la Virgen del Carmen, en nuestra querida provincia Ayopaya, Independencia.
+      La Fe y devoción nos une, la tradición nos llama. Los Pasantes 2025 tenemos el honor de invitarle(s) a celebrar con nosotros la Festividad de la Virgen del Carmen, en nuestra querida provincia Ayopaya, Independencia.
       </p>
      
       <br>

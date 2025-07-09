@@ -1935,6 +1935,52 @@ hr {
 
 
 
+.carruselAnahi {
+  position: relative;
+  max-width: 600px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.anahi-slides img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+  display: none;
+  border-radius: 20px;
+}
+
+.anahi-prev, .anahi-next {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.anahi-prev {
+  left: 10px;
+}
+
+.anahi-next {
+  right: 10px;
+}
+
+
+
+
+
 
 
 
@@ -2489,7 +2535,7 @@ hr {
 .card-3d_Diablada div:nth-child(5) { transform: translate(-50%, -50%) rotateY(205.71deg) translateZ(250px); }
 .card-3d_Diablada div:nth-child(6) { transform: translate(-50%, -50%) rotateY(257.14deg) translateZ(250px); }
 .card-3d_Diablada div:nth-child(7) { transform: translate(-50%, -50%) rotateY(308.57deg) translateZ(250px); }
-
+.card-3d_Diablada div:nth-child(8) { transform: translate(-50%, -50%) rotateY(308.57deg) translateZ(250px); }
 
 
 .card-3d_tinku div:nth-child(1) { transform: translate(-50%, -50%) rotateY(0deg) translateZ(300px); }
@@ -2513,6 +2559,7 @@ hr {
 .card-3d div:nth-child(7) { transform: translate(-50%, -50%) rotateY(240deg) translateZ(350px); }
 .card-3d div:nth-child(8) { transform: translate(-50%, -50%) rotateY(280deg) translateZ(350px); }
 .card-3d div:nth-child(9) { transform: translate(-50%, -50%) rotateY(320deg) translateZ(350px); }
+.card-3d div:nth-child(10) { transform: translate(-50%, -50%) rotateY(320deg) translateZ(350px); }
 
 
 

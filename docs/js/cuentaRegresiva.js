@@ -118,6 +118,36 @@ let misaIndex = 0;
     showMisaSlide(misaIndex);
   });
 
+
+
+
+
+
+  let anahiIndex = 0;
+const anahiSlides = document.querySelectorAll('.anahi-slides img');
+
+function showAnahiSlide(n) {
+  anahiSlides.forEach((img, i) => {
+    img.style.display = (i === n) ? 'block' : 'none';
+  });
+}
+
+function anahiSlide(n) {
+  anahiIndex += n;
+  if (anahiIndex < 0) anahiIndex = anahiSlides.length - 1;
+  if (anahiIndex >= anahiSlides.length) anahiIndex = 0;
+  showAnahiSlide(anahiIndex);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  showAnahiSlide(anahiIndex);
+});
+
+
+
+
+
+
   document.querySelectorAll('.thumb').forEach(thumb => {
     thumb.addEventListener('click', () => {
       const mainImage = document.getElementById('mainImage');
@@ -144,6 +174,9 @@ let misaIndex = 0;
       thumb.classList.add('active');
     });
   });
+
+
+
 
 
    // ➕ Nuevo slider (independiente)

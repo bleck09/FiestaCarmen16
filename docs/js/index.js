@@ -51,7 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
       saludoElement.innerText = "¡Bienvenido a la invitación!";
     }
     if (mensajeElement) {
-      mensajeElement.innerText = "La fe nos une, la tradición nos llama. Los Pasantes 2025 tenemos el honor de invitarle(s) a celebrar con nosotros la Festividad de la Virgen del Carmen, en nuestra querida provincia Ayopaya, Independencia.";
+      mensajeElement.innerText = "La Fe nos une, la tradición nos llama. Los Pasantes 2025 tenemos el honor de invitarle(s) a celebrar con nosotros la Festividad de la Virgen del Carmen, en nuestra querida provincia Ayopaya, Independencia.";
     }
   }
 });
