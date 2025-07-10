@@ -22,33 +22,42 @@
 </head>
 
 <body>
-    <!-- Elemento de audio oculto -->
-    <audio id="background-music" loop>
-        <source src="../music/MusicaMixlibiano.mp3" type="audio/mpeg">
-        Tu navegador no soporta la reproducción de audio.
-    </audio>
+    <!-- Elemento de audio -->
+  <audio id="background-music" loop>
+    <source id="audio-source" src="" type="audio/mpeg">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
 
-    <script>
-        // Función para reproducir o pausar la música dependiendo de la visibilidad de la página
-        function handleVisibilityChange() {
-            var audio = document.getElementById('background-music');
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const codigo = params.get('codigo');
+    const audio = document.getElementById('background-music');
+    const source = document.getElementById('audio-source');
 
-            if (document.hidden) {
-                audio.pause(); // Pausa la música si la página no está visible
-            } else {
-                audio.play(); // Reanuda la música si la página está visible
-            }
-        }
+    // Elegir música según el parámetro
+    if (codigo === 'morenada') {
+      source.src = '../music/hay_que_bailar_moreno.mp3';  // música para jóvenes
+    } else {
+      source.src = '../music/MusicaMixlibiano.mp3';  // música para mayores
+    }
 
-        // Al cargar la página, reproduce la música
-        window.addEventListener('load', function () {
-            var audio = document.getElementById('background-music');
-            audio.play();
-        });
+    // Cargar y reproducir la música
+    window.addEventListener('load', () => {
+      audio.load();
+      audio.play().catch(() => {
+        console.log("La música se activará tras una acción del usuario.");
+      });
+    });
 
-        // Escucha el evento de cambio de visibilidad
-        document.addEventListener('visibilitychange', handleVisibilityChange, false);
-    </script>
+    // Controlar visibilidad
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+    });
+  </script>
     <section class="section2">
         <div class="container text-center mt-5">
             <br><br>

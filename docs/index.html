@@ -19,6 +19,18 @@
 </head>
 
 <body>
+  <script>
+  function redirigir() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const codigo = urlParams.get('codigo');
+
+    if (codigo === 'morenada') {
+      window.location.href = 'pages/contenido.html?codigo=morenada';
+    } else {
+      window.location.href = 'pages/contenido.html';
+    }
+  }
+  </script>
   
   <section class="section1">
     <div class="container text-center mt-5">
@@ -43,7 +55,7 @@
 
       <br>
       <!-- From Uiverse.io by MuhammadHasann -->
-      <button class="BotonIndex animar-boton" onclick="window.location.href='pages/contenido.html';">
+      <button class="BotonIndex animar-boton" onclick="redirigir()">
         <p
           style="font-family: 'Georgia', serif; font-style: italic; color: rgb(0, 0, 0); text-align: center; margin: 5px 2px; font-size: 17px;">
           Abrir Invitacion
